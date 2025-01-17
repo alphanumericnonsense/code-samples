@@ -67,16 +67,17 @@ The problems problems below touch on Markov chains, path-finding, maxflow/mincut
    Start End Delta Time Status:
 
    ```
--   0     -    1 Bulkhead initially open
+   -   0     -    1 Bulkhead initially open
    0   4    -1    2
    4   2     2    0
    2   4    -1    1
    4   3     2   -1 Bulkhead closes
    3   4    -1    0 Bulkhead reopens; you and the bunnies exit
+    
    ```
    
    With this solution, you would pick up bunnies 1 and 2.  This is the best combination for this space station hallway, so the  answer is [1, 2].
-
+   
 - `edmonds_karp.py`.  **Escape Pods**.  You've blown up the LAMBCHOP doomsday device and broken the bunnies out of  Lambda's prison - and now you need to escape from the space station as  quickly and as orderly as possible! The bunnies have all gathered in  various locations throughout the station, and need to make their way  towards the seemingly endless amount of escape pods positioned in other  parts of the station. You need to get the numerous bunnies through the  various rooms to the escape pods. Unfortunately, the corridors between  the rooms can only fit so many bunnies at a time. What's more, many of  the corridors were resized to accommodate the LAMBCHOP, so they vary in  how many bunnies can move through them at a time.
 
    Given the starting room numbers of the groups of bunnies,  the room numbers of the escape pods, and how many bunnies can fit  through at a time in each direction of every corridor in between, figure out how many bunnies can safely make it to the escape pods at a time at peak.
