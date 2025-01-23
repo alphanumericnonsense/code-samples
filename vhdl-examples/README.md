@@ -3,7 +3,7 @@
 ## Contents
 
 - `/bubblesort`.  Parallelized bubblesort with tb and top level test (16 switches, 16 LEDs, sorts 4 4-bit switch inputs and displays on LEDs).  Two rows of offset compare/swap units with feedback on clock.  Sorts array of $N$ numbers in $N/2$ cycles.  Not practical for $N$ large or large integer width.
-- `/lfsr`.  A linear-feedback shift register with tb.
+- `/lfsr`.  A linear-feedback shift register with tb and quick mathematical explanation of LFSR as a dynamical system.
 - `/pipelined-crypto`.  Rounds are unrolled and accept new input each cycle.  No modes, just single block encryption or hashing (when applicable).
   - `/aes`.  Randomized tb tests encryption against third-party.
   - `/gift`.   TB checks the three test vectors from [here](https://github.com/giftcipher/gift/tree/master/implementations/test%20vectors).  A couple architectures (one/two rounds per cycle, round-reduced).
