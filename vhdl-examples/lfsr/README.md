@@ -22,7 +22,7 @@ $$
 
 If $m(x)$ is *primitive*, i.e. $x$ generates the multiplicative group of $F$,  then there are two orbits, namely $\\{0\\}$ and $F^{\times}$.
 
-If we instead we consider the action of the transpose, $M_x^t$, we obtain a simpler but equivalent dynamical system (a matrix over a field is similar to its transpose), namely a linear feedback shift register:
+If we instead consider the action of the transpose, $M_x^t$, we obtain a simpler but equivalent dynamical system (a matrix over a field is similar to its transpose), namely a linear feedback shift register:
 
 $$
 M_x^tv=\left(v_1,v_2,\ldots, v_{d-1}, \sum_{i=0}^{d-1}m_iv_i\right)^t.
@@ -52,6 +52,39 @@ for i in range(255):
 print(L)
 for l in L:
     print(bin(l))
+```
+
+or in C
+
+```C
+#include <stdio.h>
+
+// dot product of two 8-bit binary vectors
+unsigned char dot(unsigned char m, unsigned char v) {
+    int a = m & v;
+    int r = 0;
+    for (int i = 0; i < 8; i++) {
+        r ^= a & 1;
+        a >>= 1;
+    }
+    return r;
+}
+
+unsigned char LFSR(unsigned char v, unsigned char m) {
+    int r = v;
+    r <<= 1; // shift
+    r ^= dot(m, v); // add new bit
+    return r;
+}
+
+int main() {
+    unsigned char v = 1;
+    for (int i = 0; i < 255; i++) {
+        printf("%08b\n", v);
+        v = LFSR(v, 1 + 2 + 4 + 128);
+    }
+    return 0;
+}
 ```
 
 produces the sequence
