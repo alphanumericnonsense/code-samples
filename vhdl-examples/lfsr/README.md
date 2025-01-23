@@ -1,6 +1,7 @@
 # LFSR math
 
 Let $F=GF(2)[x]/(m(x))$ with $m(x)=\sum_{i=0}^dm_ix^i\in GF(2)[x]$ irreducible.  The matrix of multiplication by $x$ (acting on the left) with respect to the polynomial basis $\{1,x,x^2,\ldots,x^{d-1}\}$ is
+
 $$
 M_x=\left(
 \begin{array}{ccccc}
@@ -14,15 +15,19 @@ M_x=\left(
 $$
 
 This defines a dynamical system on $F$ (or $GF(2)^d$),
+
 $$
 M_xv=(m_0v_d, v_0+m_1v_d, \ldots, v_{d-1}+m_{d-1}v_d)^t, \quad v\in GF(2)^d.
 $$
+
 If $m(x)$ is *primitive*, i.e. $x$ generates the multiplicative group of $F$,  then there are two orbits, namely $\{0\}$ and $F^{\times}$.
 
 If we instead we consider the action of the transpose, $M_x^t$, we obtain a simpler but equivalent dynamical system (a matrix over a field is similar to its transpose), namely a linear feedback shift register:
+
 $$
 M_x^tv=\left(v_1,v_2,\ldots, v_{d-1}, \sum_{i=0}^{d-1}m_iv_i\right)^t.
 $$
+
 Here we shift the coordinates of $v$ and tack on a new bit $\langle m,v\rangle$.  A primitive LFSR gives a simple device to produce large pseudorandom strings.  E.g. this length 8 LFSR (using 8-bit integers as vectors) with initial vector 1
 
 ```python
