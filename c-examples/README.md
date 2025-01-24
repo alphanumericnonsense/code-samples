@@ -4,6 +4,7 @@ Some random stuff in C as evidence that I did things in C.  None of the crypto s
 
 ## Contents
 
+- `huffman/`.  Huffman coding, does the bible as an example.  Just produces the codes, doesn't do (de)compression.
 - `AES/`.  AES in ECB mode, nothing fancy, a little program to encrypt/decrypt text files.
 - `ALTCODES/`.  Encoding/decoding alternant codes (subfield subcodes of generalized Reed--Solomon codes).  Can futz with parameters ($n$, $k$, $q$, lower bounds for $d$).  Includes some randomized testing.
 - `KARATSUBA/`.  A little test of integer coefficient polynomial Karatsuba multiplication.  $O(n^{\log_23})$ as opposed to $O(n^2)$ schoolbook multiplication.  [Wikipedia](https://en.wikipedia.org/wiki/Karatsuba_algorithm).
