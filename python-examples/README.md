@@ -13,7 +13,7 @@ Some random crap for the purposes of proving I'm not totally incompetent.  None 
 - `berlekamp_massey.py`.  An implementation of the Berlekamp--Massey algorithm for finding the smallest LFSR producing a given output.  Sort of a simple, slow Euclidean algorithm, useful for solving the "key equation" for algebraic codes of Reed--Solomon type (alternant codes or subfield subcodes of generalized Reed--Solomon codes).  [*Shift-Register Synthesis and BCH Decoding*](https://crypto.stanford.edu/~mironov/cs359/massey.pdf).
 - `euclid.py`.  A couple implementations of the (extended) Euclidean algorithm, including fast binary versions for integers and polynomials over $GF(2)$.
 - `gf.py`.  A class for arithmetic over $GF(2^n)$.
-- `fft.py`.  A fast Fourier transform implementation (iterative DIT/Tukey--Cooley).
+- `fft.py`.  Some Fast Fourier transform implementations (iterative and recursive DIT/Tukey--Cooley) along with randomized testing.  Some notes on DFT/FFT in `DFT.pdf`.
 - `reed_muller.py`.  Encoding/decoding Reed--Muller codes.  Some lazy inefficiency/overcounting in the decoding.
 - `reed_solomon.py`.  Encoding/decoding Reed--Solomon codes.  Running the script goes through some encoding + errors + decoding for some particular parameters $`[n,k,d=n-k+1]_q = [255,32,224]_{8}`$.
 - `linear_regerssion.py`.  A simple linear regression in one variable, i.e. output is `y=a*x+b` based on a list of input pairs `(xi,yi)`.
