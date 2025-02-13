@@ -23,6 +23,7 @@ Some random crap for the purposes of proving I'm not totally incompetent.  None 
   - `frodo.py`.
   - `mceliece_full_scheme.py`.
   - `saber_scheme.py`.
+- `miller_rabin.py`.  Miller--Rabin primality testing.  Running the script spits out probable primes less than a hundred and a uniformly random 128-byte probable prime, both tasks with four trials.
 
 ## Requirements
 
