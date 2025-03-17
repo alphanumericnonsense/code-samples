@@ -24,7 +24,8 @@ Some random crap for the purposes of proving I'm not totally incompetent.  None 
   - `mceliece_full_scheme.py`.
   - `saber_scheme.py`.
 - `miller_rabin.py`.  Miller--Rabin primality testing.  Running the script spits out probable primes less than a hundred and a uniformly random 128-byte probable prime, both tasks with four trials.
+- `slh_dsa.py`.  An implementation of SLH-DSA (FIPS 205, SPHINCS+).  Running the script signs and verifies some random data/context with the 128s parameter set with SHAKE (pure hash, non-deterministic) and parses the large signature into the random seed, a FORS signature, and a hyper-tree signature (sequence of XMSS signatures).
 
 ## Requirements
 
-Some of the crypto testing (namely `aes256_ctr_drbg` in the Kyber/Dilithium KAT testing) uses [`pycryptodome`](https://www.pycryptodome.org/) (using the `Cryptodome` package name).
+Some of the crypto testing (namely `aes256_ctr_drbg` in the Kyber/Dilithium KAT testing and the hashing in `slh_dsa`) uses [`pycryptodome`](https://www.pycryptodome.org/) (using the `Cryptodome` package name).
