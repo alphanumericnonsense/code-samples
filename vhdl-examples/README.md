@@ -13,6 +13,7 @@
 - `/slow-crypto`.  Reusing the round function.
   - `/aes`.  TB iterates encryption with feedback, compares output to third-party reference.
   - `/gift`.  TB checks the three test vectors from [here](https://github.com/giftcipher/gift/tree/master/implementations/test%20vectors).  Two rounds per cycle.
+- `/prince`.  TB checks against test vectors from [here](https://eprint.iacr.org/2012/529.pdf).  Just a function; haven't put it in hardware to see if it will actually fit in a single cycle at any reasonable frequency (PRINCE is designed as a low latency block cipher by/for NXP, used for flash encryption in their products).
 
 
 ## Requirements
