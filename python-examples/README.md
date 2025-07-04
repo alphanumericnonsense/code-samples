@@ -25,6 +25,12 @@ Some random crap for the purposes of proving I'm not totally incompetent.  None 
   - `saber_scheme.py`.
 - `miller_rabin.py`.  Miller--Rabin primality testing.  Running the script spits out probable primes less than a hundred and a uniformly random 128-byte probable prime, both tasks with four trials.
 - `slh_dsa.py`.  An implementation of SLH-DSA (FIPS 205, SPHINCS+).  Running the script signs and verifies some random data/context with the 128s parameter set with SHAKE (pure hash, non-deterministic) and parses the large signature into the random seed, a FORS signature, and a hyper-tree signature (sequence of XMSS signatures).
+- `p256.py`.  ECDSA with NIST curve p-256.  Some SCA countermeasures
+  - random projectivization before each point scaling
+  - Montgomery ladder
+  - multiplicative blinding of nonce inversion, inv(k) = blind * inv(k * blind)
+  - additive scalar blinding, sP = (r+s)P + (n-r)P
+  - same code for double/add in projective coords
 
 ## Requirements
 
