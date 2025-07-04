@@ -6,8 +6,9 @@
 # some SCA countermeasures:
 #   - random projectivization before each point scaling
 #   - Montgomery ladder
-#   - multiplicative blinding of nonce
-#   - same code for double/add
+#   - multiplicative blinding of nonce inversion, inv(k) = blind * inv(k * blind)
+#   - additive scalar blinding, sP = (r+s)P + (n-r)P
+#   - same code for double/add in projective coords
 #----------------------------------------------------------------------------#
 
 import os
